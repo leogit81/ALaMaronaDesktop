@@ -21,5 +21,10 @@ namespace ALaMarona.Controller
         {
             return productoRepository.GetById(id);
         }
+
+        public void Save(Producto producto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
