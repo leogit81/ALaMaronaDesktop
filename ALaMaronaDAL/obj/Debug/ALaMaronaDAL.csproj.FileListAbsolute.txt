@@ -1,8 +1,0 @@
-c:\users\administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\bin\Debug\ALaMaronaDAL.exe.config
-c:\users\administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\bin\Debug\ALaMaronaDAL.exe
-c:\users\administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\bin\Debug\ALaMaronaDAL.pdb
-c:\users\administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\obj\Debug\ALaMaronaDAL.exe
-c:\users\administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\obj\Debug\ALaMaronaDAL.pdb
-C:\Users\Administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\obj\Debug\ALaMaronaDAL.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\bin\Debug\ALaMarona.Domain.exe
-C:\Users\Administrator\documents\visual studio 2015\Projects\ALaMaronaDesktop\ALaMaronaDAL\bin\Debug\ALaMarona.Domain.pdb
