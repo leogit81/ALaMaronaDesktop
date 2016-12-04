@@ -43,14 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductoRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="Mappings\Producto.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mappings\" />
+    <ProjectReference Include="..\ALaMarona.Domain\ALaMarona.Domain.csproj">
+      <Project>{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}</Project>
+      <Name>ALaMarona.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

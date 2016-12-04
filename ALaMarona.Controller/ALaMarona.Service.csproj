@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}</ProjectGuid>
+    <ProjectGuid>{2E07D654-6C34-4B8B-99E8-943B48948D0E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ALaMarona.Domain</RootNamespace>
-    <AssemblyName>ALaMarona.Domain</AssemblyName>
+    <RootNamespace>ALaMarona.Controller</RootNamespace>
+    <AssemblyName>ALaMarona.Controller</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Entity.cs" />
-    <Compile Include="Entities\Producto.cs" />
+    <Compile Include="ProductoService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ALaMarona.Domain\ALaMarona.Domain.csproj">
+      <Project>{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}</Project>
+      <Name>ALaMarona.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ALaMaronaDAL\ALaMaronaDAL.csproj">
+      <Project>{235C2788-7E55-41D4-B205-A78DB4911818}</Project>
+      <Name>ALaMaronaDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

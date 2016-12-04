@@ -7,7 +7,41 @@
         mc:Ignorable="d"
         Title="A La Marona" Height="350" Width="525">
     <Grid>
-        <Label x:Name="lblTest" Content="Sin estado" HorizontalAlignment="Left" Margin="52,34,0,0" VerticalAlignment="Top" Height="31" Width="386"/>
-
+        <Label x:Name="lblTest" Content="Sin estado" HorizontalAlignment="Left" Margin="1,-65,0,0" VerticalAlignment="Top" Height="31" Width="386" Visibility="Hidden"/>
+        <Menu x:Name="menu" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal"></VirtualizingStackPanel>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem x:Name="miStock" Header="Stock" Click="miStock_Click"/>
+            <MenuItem x:Name="miProductos" Header="Productos" Click="miProductos_Click"/>
+            <MenuItem x:Name="miColores" Header="Colores" Click="miColores_Click"/>
+        </Menu>
+        <TabControl Name="tab" Margin="8, 15, 8, 10">
+            <TabItem Name="tiStock" TabIndex="0">
+                <ContentControl>
+                    Proximamente!
+                </ContentControl>
+            </TabItem>
+            <TabItem Name="tiProductos" TabIndex="1">
+                <StackPanel>
+                    <Label x:Name="lblCodigo" Content="Código" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 0" Padding="2"/>
+                    <TextBox Name="txtCodigo" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 0"></TextBox>
+                    <Label x:Name="lblDescripcion" Content="Descripción" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 0" Padding="2"/>
+                    <TextBox Name="txtDescripcion" Width="461" Height="50" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"></TextBox>
+                    <WrapPanel>
+                        <Button Name="btnBuscarProducto" Content="Buscar" Width="60" Height="25" Margin="10,10,0,0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnBuscarProducto_Click"></Button>
+                        <Button Name="btnNuevoProducto" Content="Nuevo" Width="60" Height="25" Margin="10,10,0,0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnNuevoProducto_Click"></Button>
+                        <Button Name="btnGuardarProducto" IsEnabled="False" Content="Guardar" Width="60" Height="25" Margin="10,10,0,0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnGuardarProducto_Click"></Button>
+                    </WrapPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tiColores" TabIndex="2">
+                <ContentControl>
+                    Proximamente!
+                </ContentControl>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
