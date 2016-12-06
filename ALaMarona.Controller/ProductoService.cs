@@ -1,22 +1,21 @@
 ﻿using ALaMarona.Domain.Entities;
 using ALaMaronaDAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NHibernate;
 
-namespace ALaMarona.Controller
+namespace ALaMarona.Service
 {
     public class ProductoService
     {
+        //TODO: Si el repositorio se inyecta no habria que guardar esta referencia y tampoco sería necesario el argumento del constructor
+        private ISessionFactory sessionFactory { get; set; }
+
         protected ProductoRepository productoRepository;
 
-        public ProductoService()
+        public ProductoService(ISessionFactory sessionFactory)
         {
-
+            productoRepository = new ProductoRepository(sessionFactory);
         }
-
+        
         public Producto GetById(long id)
         {
             return productoRepository.GetById(id);
@@ -24,7 +23,7 @@ namespace ALaMarona.Controller
 
         public void Save(Producto producto)
         {
-            throw new NotImplementedException();
+            productoRepository.Add(producto);
         }
     }
 }

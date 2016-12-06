@@ -1,5 +1,6 @@
-﻿using NHibernate.Cfg;
-using System;
+﻿using ALaMarona.Service;
+using NHibernate;
+using NHibernate.Cfg;
 using System.Windows;
 
 namespace ALaMaronaDesktop
@@ -9,14 +10,20 @@ namespace ALaMaronaDesktop
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ProductoService productoService { get; set; }
+        public ISessionFactory SessionFactory { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
 
             var nhConfig = new Configuration().Configure();
-            var sessionFactory = nhConfig.BuildSessionFactory();
+            SessionFactory = nhConfig.BuildSessionFactory();
             lblTest.Content = "NHibernate configured!";
             tab.SelectedIndex = 0;
+
+            //TODO: esto habría que cambiarlo utilizando inyección de dependencias
+            productoService = new ProductoService(SessionFactory);
         }
 
         private void miColores_Click(object sender, RoutedEventArgs e)
@@ -34,8 +41,15 @@ namespace ALaMaronaDesktop
             tab.SelectedIndex = tiProductos.TabIndex;
         }
 
+        void habilitarEdicionProducto(bool habilitar)
+        {
+            txtCodigo.IsReadOnly = !habilitar;
+            txtDescripcion.IsReadOnly = !habilitar;
+        }
+
         private void btnNuevoProducto_Click(object sender, RoutedEventArgs e)
         {
+            habilitarEdicionProducto(true);
             btnGuardarProducto.IsEnabled = true;
             txtCodigo.Clear();
             txtDescripcion.Clear();
@@ -47,7 +61,11 @@ namespace ALaMaronaDesktop
 
         private void btnGuardarProducto_Click(object sender, RoutedEventArgs e)
         {
-
+            var producto = new ALaMarona.Domain.Entities.Producto();
+            producto.Codigo = txtCodigo.Text;
+            producto.Descripcion = txtDescripcion.Text;
+            productoService.Save(producto);
+            habilitarEdicionProducto(false);
         }
     }
 }

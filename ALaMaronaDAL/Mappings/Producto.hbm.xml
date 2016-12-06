@@ -2,7 +2,7 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ALaMarona.Domain" namespace="ALaMarona.Domain">
   <class name="Producto">
     <id name="Id">
-      <generator class="assignedS"></generator>
+      <generator class="assigned"></generator>
     </id>
     <property name="Codigo" not-null="false" />
     <property name="Descripcion" not-null="true" />

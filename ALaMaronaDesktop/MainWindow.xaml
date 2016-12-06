@@ -27,9 +27,9 @@
             <TabItem Name="tiProductos" TabIndex="1">
                 <StackPanel>
                     <Label x:Name="lblCodigo" Content="Código" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 0" Padding="2"/>
-                    <TextBox Name="txtCodigo" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 0"></TextBox>
+                    <TextBox Name="txtCodigo" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 0" IsReadOnly="True"></TextBox>
                     <Label x:Name="lblDescripcion" Content="Descripción" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 0" Padding="2"/>
-                    <TextBox Name="txtDescripcion" Width="461" Height="50" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"></TextBox>
+                    <TextBox Name="txtDescripcion" Width="461" Height="50" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" IsReadOnly="True"></TextBox>
                     <WrapPanel>
                         <Button Name="btnBuscarProducto" Content="Buscar" Width="60" Height="25" Margin="10,10,0,0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnBuscarProducto_Click"></Button>
                         <Button Name="btnNuevoProducto" Content="Nuevo" Width="60" Height="25" Margin="10,10,0,0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnNuevoProducto_Click"></Button>

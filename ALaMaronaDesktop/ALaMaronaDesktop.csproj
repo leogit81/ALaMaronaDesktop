@@ -102,6 +102,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ALaMarona.Controller\ALaMarona.Service.csproj">
+      <Project>{2E07D654-6C34-4B8B-99E8-943B48948D0E}</Project>
+      <Name>ALaMarona.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ALaMarona.Domain\ALaMarona.Domain.csproj">
+      <Project>{8f5ffdc1-824c-4cc2-a2d0-9ef79a22642a}</Project>
+      <Name>ALaMarona.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ALaMaronaDAL\ALaMaronaDAL.csproj">
       <Project>{235c2788-7e55-41d4-b205-a78db4911818}</Project>
       <Name>ALaMaronaDAL</Name>

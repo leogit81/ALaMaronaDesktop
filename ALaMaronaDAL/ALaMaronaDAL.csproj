@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{235C2788-7E55-41D4-B205-A78DB4911818}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ALaMaronaDAL</RootNamespace>
     <AssemblyName>ALaMaronaDAL</AssemblyName>
@@ -32,7 +32,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Eg.Core">
+      <HintPath>..\..\..\..\Cookbook\Eg.Core\Eg.Core.Data.Impl\bin\Debug\Eg.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Eg.Core.Data">
+      <HintPath>..\..\..\..\Cookbook\Eg.Core\Eg.Core.Data.Impl\bin\Debug\Eg.Core.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Eg.Core.Data.Impl">
+      <HintPath>..\..\..\..\Cookbook\Eg.Core\Eg.Core.Data.Impl\bin\Debug\Eg.Core.Data.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>Lib\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProductoRepository.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
