@@ -36,9 +36,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Eg.Core">
-      <HintPath>..\..\..\..\Cookbook\Eg.Core\Eg.Core.Data.Impl\bin\Debug\Eg.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Cookbook\Eg.Core\Eg.Core\Eg.Core.csproj">
+      <Project>{188E300B-50BD-4611-ACFB-EF38F1538D48}</Project>
+      <Name>Eg.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

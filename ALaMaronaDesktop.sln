@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schema", "Schema", "{3D14AC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigByAppConfig", "ConfigByAppConfig\ConfigByAppConfig.csproj", "{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMarona.Service", "ALaMarona.Controller\ALaMarona.Service.csproj", "{2E07D654-6C34-4B8B-99E8-943B48948D0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMarona.Service", "ALaMarona.Service\ALaMarona.Service.csproj", "{2E07D654-6C34-4B8B-99E8-943B48948D0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

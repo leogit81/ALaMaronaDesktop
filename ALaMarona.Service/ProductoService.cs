@@ -1,6 +1,8 @@
 ﻿using ALaMarona.Domain.Entities;
 using ALaMaronaDAL;
+using Eg.Core;
 using NHibernate;
+using System.Collections.Generic;
 
 namespace ALaMarona.Service
 {
@@ -19,6 +21,11 @@ namespace ALaMarona.Service
         public Producto GetById(long id)
         {
             return productoRepository.GetById(id);
+        }
+
+        public IList<Producto> GetAll()
+        {
+            return productoRepository.GetAll();
         }
 
         public void Save(Producto producto)
