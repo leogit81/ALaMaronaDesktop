@@ -6,5 +6,6 @@
     </id>
     <property name="Codigo" not-null="false" />
     <property name="Descripcion" not-null="true" />
+    <property name="Talle"/>
   </class>
 </hibernate-mapping>

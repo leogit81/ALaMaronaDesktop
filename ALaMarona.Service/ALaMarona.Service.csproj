@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ALaMarona.Service</RootNamespace>
     <AssemblyName>ALaMarona.Service</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,13 +54,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Cookbook\Eg.Core\Eg.Core.Data\Eg.Core.Data.csproj">
+      <Project>{75A2689E-5CE3-44DA-A252-B5AFF6B28F47}</Project>
+      <Name>Eg.Core.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Cookbook\Eg.Core\Eg.Core\Eg.Core.csproj">
       <Project>{188E300B-50BD-4611-ACFB-EF38F1538D48}</Project>
       <Name>Eg.Core</Name>
@@ -71,6 +75,10 @@
     <ProjectReference Include="..\ALaMaronaDAL\ALaMaronaDAL.csproj">
       <Project>{235C2788-7E55-41D4-B205-A78DB4911818}</Project>
       <Name>ALaMaronaDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ALaMaronaWebApi\ALaMarona.Core\ALaMarona.Core.csproj">
+      <Project>{ce0bc458-3378-4de8-b3b6-95ea52b863ff}</Project>
+      <Name>ALaMarona.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

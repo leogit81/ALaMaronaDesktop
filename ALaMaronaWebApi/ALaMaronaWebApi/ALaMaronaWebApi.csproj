@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -95,7 +99,6 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
-    <Compile Include="DTOs\ProductoDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -115,6 +118,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Cookbook\Eg.Core\Eg.Core\Eg.Core.csproj">
+      <Project>{188e300b-50bd-4611-acfb-ef38f1538d48}</Project>
+      <Name>Eg.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ALaMarona.Domain\ALaMarona.Domain.csproj">
       <Project>{8f5ffdc1-824c-4cc2-a2d0-9ef79a22642a}</Project>
       <Name>ALaMarona.Domain</Name>
@@ -122,6 +129,14 @@
     <ProjectReference Include="..\..\ALaMarona.Service\ALaMarona.Service.csproj">
       <Project>{2e07d654-6c34-4b8b-99e8-943b48948d0e}</Project>
       <Name>ALaMarona.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ALaMaronaDAL\ALaMaronaDAL.csproj">
+      <Project>{235c2788-7e55-41d4-b205-a78db4911818}</Project>
+      <Name>ALaMaronaDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ALaMarona.Core\ALaMarona.Core.csproj">
+      <Project>{ce0bc458-3378-4de8-b3b6-95ea52b863ff}</Project>
+      <Name>ALaMarona.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

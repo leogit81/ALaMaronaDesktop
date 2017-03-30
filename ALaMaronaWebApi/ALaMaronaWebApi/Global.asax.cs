@@ -1,12 +1,10 @@
-﻿using NHibernate;
+﻿using ALaMarona.Core;
+using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Context;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Routing;
 
 namespace ALaMaronaWebApi
 {
@@ -23,6 +21,8 @@ namespace ALaMaronaWebApi
 
             var nhConfig = new Configuration().Configure();
             HttpContext.Current.Application["SessionFactory"] = nhConfig.BuildSessionFactory();
+
+            Factory.Instance.ConfigureMapping();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
