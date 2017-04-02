@@ -7,5 +7,6 @@ namespace ALaMarona.Domain.Entities
         public virtual string Codigo { get; set; }
         public virtual string Descripcion { get; set; }
         public virtual int Talle { get; set; }
+        public virtual Color Color { get; set; }
     }
 }

@@ -71,4 +71,13 @@
     <Build Include="dbo\Tables\ImagenProducto.sql" />
     <Build Include="Storage\imagenesProductos.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SqlSchemaCompare1.scmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ALaMarona.SQL.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
+  </ItemGroup>
 </Project>
