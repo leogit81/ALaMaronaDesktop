@@ -4,12 +4,12 @@
     <id name="Id">
       <generator class="identity"></generator>
     </id>
-    <property name="CodigoHexa"/>
+    <property name="CodigoHexa" column="codigoHexa"/>
     <property name="Descripcion"/>
     <property name="Nombre" not-null="true" />
-    <bag name="Productos" cascade="none">
+    <set name="Productos" cascade="none" table="Producto" inverse="true">
       <key column="idColor" />
       <one-to-many class="ALaMarona.Domain.Entities.Color, ALaMarona.Domain"/>
-    </bag>
+    </set>
   </class>
 </hibernate-mapping>

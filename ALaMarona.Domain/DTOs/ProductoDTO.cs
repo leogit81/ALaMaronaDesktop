@@ -7,5 +7,6 @@ namespace ALaMarona.Domain.DTOs
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
         public int Talle { get; set; }
+        public ColorDTO Color { get; set; }
     }
 }

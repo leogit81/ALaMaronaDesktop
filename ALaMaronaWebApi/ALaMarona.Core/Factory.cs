@@ -24,7 +24,11 @@ namespace ALaMarona.Core
 
         public void ConfigureMapping()
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<Producto, ProductoDTO>().ReverseMap());
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Producto, ProductoDTO>().ReverseMap();
+                cfg.CreateMap<Color, ColorDTO>().ReverseMap();
+            });
         }
     }
 }

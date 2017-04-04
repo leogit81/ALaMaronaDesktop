@@ -3,14 +3,10 @@ using ALaMarona.Domain.DTOs;
 using Eg.Core;
 using System.Collections.Generic;
 using System.Web.Http;
-using System.Linq;
 using Eg.Core.DTOs;
-using Eg.Core.Data;
 using Eg.Core.Data.Impl;
 using System.Web;
 using NHibernate;
-using ALaMarona.Core;
-using AutoMapper;
 
 namespace ALaMarona.Core.Controller
 {
