@@ -58,6 +58,11 @@
     <Compile Include="DTOs\ColorDTO.cs" />
     <Compile Include="DTOs\ProductoDTO.cs" />
     <Compile Include="Entities\Color.cs" />
+    <Compile Include="Entities\Localidad.cs" />
+    <Compile Include="Entities\Provincia.cs" />
+    <Compile Include="Entities\Pais.cs" />
+    <Compile Include="Entities\Persona.cs" />
+    <Compile Include="Entities\Direccion.cs" />
     <Compile Include="Entities\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

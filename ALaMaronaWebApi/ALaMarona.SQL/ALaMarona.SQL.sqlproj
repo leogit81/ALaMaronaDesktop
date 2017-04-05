@@ -70,6 +70,10 @@
     <Build Include="dbo\Tables\StockMovimiento.sql" />
     <Build Include="dbo\Tables\ImagenProducto.sql" />
     <Build Include="Storage\imagenesProductos.sql" />
+    <Build Include="dbo\Tables\Localidad.sql" />
+    <Build Include="dbo\Tables\Provincia.sql" />
+    <Build Include="dbo\Tables\Pais.sql" />
+    <Build Include="dbo\Tables\Direccion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare1.scmp" />
