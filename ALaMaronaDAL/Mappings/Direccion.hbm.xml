@@ -10,13 +10,13 @@
     <property name="Departamento"/>
     <property name="CodigoPostal" not-null="false" />
     
-    <many-to-one name="Pais" class="ALaMarona.Domain.Entities.Pais, ALaMarona.Domain" not-null="false">
+    <many-to-one name="Pais" class="ALaMarona.Domain.Entities.Pais, ALaMarona.Domain" not-null="false" cascade="all">
       <column name="IdPais"/>
     </many-to-one>
-    <many-to-one name="Provincia" class="ALaMarona.Domain.Entities.Provincia, ALaMarona.Domain" not-null="false">
+    <many-to-one name="Provincia" class="ALaMarona.Domain.Entities.Provincia, ALaMarona.Domain" not-null="false" cascade="all">
       <column name="IdProvincia"/>
     </many-to-one>
-    <many-to-one name="Localidad" class="ALaMarona.Domain.Entities.Localidad, ALaMarona.Domain" >
+    <many-to-one name="Localidad" class="ALaMarona.Domain.Entities.Localidad, ALaMarona.Domain" cascade="all" >
       <column name="IdLocalidad"/>
     </many-to-one>
   </class>

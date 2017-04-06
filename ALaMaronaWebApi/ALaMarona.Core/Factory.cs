@@ -29,6 +29,13 @@ namespace ALaMarona.Core
                 cfg.CreateMap<Producto, ProductoDTO>().ReverseMap();
                 cfg.CreateMap<Color, ColorDTO>().ReverseMap();
             });
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Direccion, DireccionDTO>().ReverseMap();
+                cfg.CreateMap<Localidad, LocalidadDTO>().ReverseMap();
+                cfg.CreateMap<Provincia, ProvinciaDTO>().ReverseMap();
+                cfg.CreateMap<Pais, PaisDTO>().ReverseMap();
+            });
         }
     }
 }

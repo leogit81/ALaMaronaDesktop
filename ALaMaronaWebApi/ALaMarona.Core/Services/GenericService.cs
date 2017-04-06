@@ -31,7 +31,12 @@ namespace ALaMarona.Core.Services
 
         public TDTO Get(TDTOId id)
         {
-            return Mapper.Map<TDTO>(repository.First(x => x.Id.Equals(id)));
+            if (id == null)
+            {
+                throw new ArgumentNullException(nameof(id));
+            }
+
+            return Mapper.Map<TDTO>(repository.FirstOrDefault(x => id.Equals(x.Id)));
         }
 
         public void Save(TDTO entityDto)
