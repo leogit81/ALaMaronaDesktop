@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ALaMaronaException.cs" />
     <Compile Include="Controller\GenericController.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="IFactory.cs" />
