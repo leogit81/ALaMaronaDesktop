@@ -1,4 +1,5 @@
 ﻿using Eg.Core.DTOs;
+using System.Collections.Generic;
 
 namespace ALaMarona.Domain.DTOs
 {
@@ -8,5 +9,6 @@ namespace ALaMarona.Domain.DTOs
         public string Descripcion { get; set; }
         public int Talle { get; set; }
         public ColorDTO Color { get; set; }
+        public ISet<ImagenDTO> Imagenes { get; set; }
     }
 }

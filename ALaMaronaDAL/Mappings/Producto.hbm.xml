@@ -10,5 +10,9 @@
     <many-to-one name="Color" class="ALaMarona.Domain.Entities.Color, ALaMarona.Domain" >
       <column name="idColor"/>
     </many-to-one>
+    <set cascade="all-delete-orphan" inverse="true" name="Imagenes">
+      <key column="IdProducto"/>
+      <one-to-many class="ALaMarona.Domain.Entities.Imagen, ALaMarona.Domain"/>
+    </set>
   </class>
 </hibernate-mapping>
