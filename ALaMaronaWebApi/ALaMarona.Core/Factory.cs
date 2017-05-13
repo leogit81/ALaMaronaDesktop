@@ -3,6 +3,7 @@ using ALaMarona.Domain.Entities;
 using AutoMapper;
 using ALaMarona.Domain.DTOs;
 using System;
+using System.Linq;
 
 namespace ALaMarona.Core
 {
@@ -36,20 +37,30 @@ namespace ALaMarona.Core
 
         public void ConfigureMapping()
         {
+        //    Mapper.Initialize(cfg =>
+        //    {
+        //        cfg.CreateMap<Producto, ProductoDTO>().ReverseMap();
+        //        cfg.CreateMap<Stock, StockDTO>().ReverseMap();
+        //        cfg.CreateMap<MovimientoStock, MovimientoStockDTO>().ReverseMap();
+        //        cfg.CreateMap<Color, ColorDTO>().ReverseMap();
+        //    });
+        //    Mapper.Initialize(cfg =>
+        //    {
+        //        cfg.CreateMap<Direccion, DireccionDTO>().ReverseMap();
+        //        cfg.CreateMap<Localidad, LocalidadDTO>().ReverseMap();
+        //        cfg.CreateMap<Provincia, ProvinciaDTO>().ReverseMap();
+        //        cfg.CreateMap<Pais, PaisDTO>().ReverseMap();
+        //    });
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<Producto, ProductoDTO>().ReverseMap();
+                cfg.CreateMap<Stock, StockDTO>();
+                cfg.CreateMap<StockDTO, Stock>()
+                .AfterMap((sDto, s) => sDto.Movimientos.ToList()
+                    .ForEach(m => s.AgregarMovimiento(Mapper.Map<MovimientoStock>(m))));
+                cfg.CreateMap<MovimientoStock, MovimientoStockDTO>().ReverseMap();
                 cfg.CreateMap<Color, ColorDTO>().ReverseMap();
-            });
-            Mapper.Initialize(cfg =>
-            {
-                cfg.CreateMap<Direccion, DireccionDTO>().ReverseMap();
-                cfg.CreateMap<Localidad, LocalidadDTO>().ReverseMap();
-                cfg.CreateMap<Provincia, ProvinciaDTO>().ReverseMap();
-                cfg.CreateMap<Pais, PaisDTO>().ReverseMap();
-            });
-            Mapper.Initialize(cfg =>
-            {
+
                 cfg.CreateMap<Direccion, DireccionDTO>().ReverseMap();
                 cfg.CreateMap<Localidad, LocalidadDTO>().ReverseMap();
                 cfg.CreateMap<Provincia, ProvinciaDTO>().ReverseMap();
