@@ -68,14 +68,6 @@
       <Project>{188E300B-50BD-4611-ACFB-EF38F1538D48}</Project>
       <Name>Eg.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ALaMarona.Domain\ALaMarona.Domain.csproj">
-      <Project>{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}</Project>
-      <Name>ALaMarona.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ALaMaronaDAL\ALaMaronaDAL.csproj">
-      <Project>{235C2788-7E55-41D4-B205-A78DB4911818}</Project>
-      <Name>ALaMaronaDAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ALaMaronaWebApi\ALaMarona.Core\ALaMarona.Core.csproj">
       <Project>{ce0bc458-3378-4de8-b3b6-95ea52b863ff}</Project>
       <Name>ALaMarona.Core</Name>

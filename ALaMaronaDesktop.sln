@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMaronaDesktop", "ALaMaronaDesktop\ALaMaronaDesktop.csproj", "{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMaronaDAL", "ALaMaronaDAL\ALaMaronaDAL.csproj", "{235C2788-7E55-41D4-B205-A78DB4911818}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMarona.Domain", "ALaMarona.Domain\ALaMarona.Domain.csproj", "{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schema", "Schema", "{3D14ACD8-FD4F-4AFF-BF5B-BFA6DFB67392}"
 	ProjectSection(SolutionItems) = preProject
 		ALaMaronaDAL\Lib\Required_Bins\nhibernate-configuration.xsd = ALaMaronaDAL\Lib\Required_Bins\nhibernate-configuration.xsd
 		ALaMaronaDAL\Lib\Required_Bins\nhibernate-mapping.xsd = ALaMaronaDAL\Lib\Required_Bins\nhibernate-mapping.xsd
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMarona.Service", "ALaMarona.Service\ALaMarona.Service.csproj", "{2E07D654-6C34-4B8B-99E8-943B48948D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMaronaDesktop", "ALaMaronaDesktop\ALaMaronaDesktop.csproj", "{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigByAppConfig", "ConfigByAppConfig\ConfigByAppConfig.csproj", "{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMarona.Service", "ALaMarona.Service\ALaMarona.Service.csproj", "{2E07D654-6C34-4B8B-99E8-943B48948D0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMarona.Domain", "..\ALaMarona.Domain\ALaMarona.Domain.csproj", "{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALaMaronaDAL", "..\ALaMaronaDAL\ALaMaronaDAL.csproj", "{235C2788-7E55-41D4-B205-A78DB4911818}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,26 +25,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Release|Any CPU.Build.0 = Release|Any CPU
-		{235C2788-7E55-41D4-B205-A78DB4911818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{235C2788-7E55-41D4-B205-A78DB4911818}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{235C2788-7E55-41D4-B205-A78DB4911818}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{235C2788-7E55-41D4-B205-A78DB4911818}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E07D654-6C34-4B8B-99E8-943B48948D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E07D654-6C34-4B8B-99E8-943B48948D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E07D654-6C34-4B8B-99E8-943B48948D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E07D654-6C34-4B8B-99E8-943B48948D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C82A1B0-2DCF-47DD-9D27-AA1A4ACF9836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC1B762-AFC3-496E-8AA1-0794E2908FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5FFDC1-824C-4CC2-A2D0-9EF79A22642A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{235C2788-7E55-41D4-B205-A78DB4911818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235C2788-7E55-41D4-B205-A78DB4911818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235C2788-7E55-41D4-B205-A78DB4911818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235C2788-7E55-41D4-B205-A78DB4911818}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
